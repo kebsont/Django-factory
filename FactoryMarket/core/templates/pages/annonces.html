@@ -1,0 +1,30 @@
+{%extends 'layouts/base.html'%}
+{% block corps %}
+    <div class="main" style="margin-top: 10px;">
+        <section>
+            <div id="container_demo" >
+                <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                <a class="hiddenanchor" id="toregister"></a>
+                <a class="hiddenanchor" id="tologin"></a>
+                <div id="wrapper">
+                    <div id="" class="animate form">
+                        <form  action="" method="post" autocomplete="on" >
+                            <h1> Créer une annonce </h1>
+                            <p>
+                                
+                            <p class="signin button">
+                                <input type="submit" value="Envoyer"/>
+                            </p>
+                            <p class="change_link">
+                                Voulez-vous exposer un produit ?
+                                <a href="" class="to_register"> Let's Go </a>
+                            </p>
+                            <!-- Ici je dois mettre un form rest form -->
+                         
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

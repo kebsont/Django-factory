@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE HTML>
+<head>
+    <title>FactoryMarket | 1° Net Market Industriel au Sénégal</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% block stylesheets %}
+        <link href="{% static 'css/stylenew.css' %}" rel="stylesheet" type="text/css" media="all"/>
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+        <link href="{% static 'css/easy-responsive-tabs.css' %}" rel="stylesheet" type="text/css" media="all"/>
+        <link rel="stylesheet" href="{% static 'css/etalage.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pgwslideshow.css' %}">
+    {% endblock %}
+</head>
+<body>
+		{% include "layouts/_nav.html" %}
+
+<!------------End Header ------------>
+
+<!-- Main : Corps de la page -->
+{% block corps %}
+{% endblock %}
+<div class="main">
+    <div class="content">
+        <div class="content_bottom">
+            <div class="wrap">
+                <div class="content-bottom-left">
+                    {% block menu_gauche %}
+                    {% endblock %}
+                </div>
+                <div class="content-bottom-right">
+                    {% block contenu_centre %}
+                    {% endblock %}
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caroussel : Nos partenaires -->
+    <div class="content_top">
+        <div class="wrap">
+            <h3>Nos Partenaires</h3>
+        </div>
+        <div class="line"> </div>
+        <div class="wrap">
+            <div class="ocarousel_slider">
+                <div class="ocarousel example_photos" data-ocarousel-perscroll="3">
+                    <div class="ocarousel_window">
+                        <a href="#" title="img1"> <img src="{% static 'images/latest-product-img1.jpg' %}" alt="" /><p>Nuncvitae</p></a>
+                        <a href="#" title="img2"> <img src="{% static 'images/latest-product-img2.jpg' %}" alt="" /><p>Suspendiss</p></a>
+                        <a href="#" title="img3"> <img src="{% static 'images/latest-product-img3.jpg' %}" alt="" /><p>Phasellus ferm</p></a>
+                        <a href="#" title="img4"> <img src="{% static 'images/latest-product-img4.jpg' %}" alt="" /><p>Veldignissim</p></a>
+                        <a href="#" title="img5"> <img src="{% static 'images/latest-product-img5.jpg' %}" alt="" /><p>Aliquam interd</p></a>
+                        <a href="#" title="img6"> <img src="{% static 'images/latest-product-img6.jpg' %}" alt="" /><p>Sapien lectus</p></a>
+                        <a href="#" title="img1"> <img src="{% static 'images/latest-product-img1.jpg' %}" alt="" /><p>Nuncvitae</p></a>
+                        <a href="#" title="img2"> <img src="{% static 'images/latest-product-img2.jpg' %}" alt="" /><p>Suspendiss</p></a>
+                        <a href="#" title="img3"> <img src="{% static 'images/latest-product-img3.jpg' %}" alt="" /><p>Phasellus ferm</p></a>
+                        <a href="#" title="img4"> <img src="{% static 'images/latest-product-img4.jpg' %}" alt="" /><p>Veldignissim</p></a>
+                        <a href="#" title="img5"> <img src="{% static 'images/latest-product-img5.jpg' %}" alt="" /><p>Aliquam interd</p></a>
+                        <a href="#" title="img6"> <img src="{% static 'images/latest-product-img6.jpg' %}" alt="" /><p>Sapien lectus</p></a>
+                    </div>
+            <span>
+              <a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
+              <a href="#" data-ocarousel-link="right" style="float: right;" class="next"> </a>
+            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Caroussel -->
+<!-- End Main -->
+
+<!-- Footer -->
+{% include "layouts/_footer.html" %}
+<!-- End Footer -->
+{% block scripts %}
+    <script src="{% static 'js/jquery-1.12.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.9.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery.openCarousel.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop"> </a>
+    <script type="text/javascript" src="{% static 'js/navigation.js' %}"> </script>
+{% endblock %}
+</body>

@@ -1,0 +1,55 @@
+{% load static %}
+<div class="header">
+    <div class="wrap">
+        <div class="header_top">
+            <div class="logo">
+                <a href="index.php"><img src="{% static 'ico/factico.png' %}" style=" height: 120px; max-width: 400px;" /></a>
+            </div>
+            <div class="header_top_right">
+                <div class="search_box">
+                    <form>
+                        <input type="text" placeholder="Search" value="">
+                        <input type="submit" value="">
+                    </form>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="navigation">
+            <a class="toggleMenu" href="#">Menu</a>
+            <ul class="nav">
+                <li><a href="{%url 'index'%}">Accueil</a></li>
+                <li  class="test"><a href="{%url 'annonces'%}">Annonces</a></li>
+                <li><a href="">Categories</a>
+
+                    <ul>
+                        {% block menuCategorie %}
+                         
+                        {% endblock %}
+                    </ul>
+
+                </li>
+                <li><a href="">L'Expo</a></li>
+                <li><a href="">Location</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Guides</a></li>
+                <li><a href="{%url 'contact'%}">Contact</a></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="header_bottom">
+            <div class="slider-text">
+                {% block description_produit_header %}
+                {% endblock %}
+                <a href="#">En Savoir Plus</a>
+            </div>
+            <div class="slider-img">
+                {% block photo_produit_header %}
+                {% endblock %}
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
