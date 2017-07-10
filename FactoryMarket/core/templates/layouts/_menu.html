@@ -1,0 +1,13 @@
+<div class="categories">
+    <ul>
+        <h3>Categories</h3>
+        {% for categorie in categ %}
+        <li>
+            <a href="#">
+                {{ categorie.nom_cat }}
+            </a>
+
+        </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -19,13 +19,13 @@
         <div class="navigation">
             <a class="toggleMenu" href="#">Menu</a>
             <ul class="nav">
-                <li><a href="{%url 'index'%}">Accueil</a></li>
-                <li  class="test"><a href="{%url 'annonces'%}">Annonces</a></li>
-                <li><a href="">Categories</a>
+                <li><a href="pages/index">Accueil</a></li>
+                <li  class="test"><a href="pages/annonces">Annonces</a></li>
+                <li><a href="#">Categories</a>
 
                     <ul>
                         {% block menuCategorie %}
-                         
+                         {% include "layouts/_menu.html" %}
                         {% endblock %}
                     </ul>
 
@@ -34,7 +34,7 @@
                 <li><a href="">Location</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Guides</a></li>
-                <li><a href="{%url 'contact'%}">Contact</a></li>
+                <li><a href="pages/contact">Contact</a></li>
                 <li></li>
             </ul>
         </div>
