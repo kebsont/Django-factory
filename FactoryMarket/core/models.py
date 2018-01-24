@@ -15,7 +15,9 @@ class Annonces(models.Model):
     titre = models.CharField(max_length=255)
     description = models.TextField()
     publie = models.IntegerField()
-    image = models.ForeignKey('Image', models.DO_NOTHING, unique=True, blank=True, null=True)
+    image = models.ForeignKey('Image', models.DO_NOTHING, blank=True, null=True)
+    def __str__(self):
+        return self.titre
 
     class Meta:
         managed = False
@@ -92,10 +94,13 @@ class Categorie(models.Model):
     nom_cat = models.CharField(db_column='NOM_CAT', max_length=255)  # Field name made lowercase.
     description_cat = models.TextField(db_column='DESCRIPTION_CAT')  # Field name made lowercase.
     photo_cat = models.CharField(db_column='PHOTO_CAT', max_length=255)  # Field name made lowercase.
+    def __str__(self):
+        return self.nom_cat
 
     class Meta:
         managed = False
         db_table = 'categorie'
+
 
 
 class DjangoAdminLog(models.Model):
@@ -152,13 +157,17 @@ class Image(models.Model):
 
 
 class Produits(models.Model):
-    image = models.ForeignKey(Image, models.DO_NOTHING, unique=True, blank=True, null=True)
+    image = models.ForeignKey(Image, models.DO_NOTHING, blank=True, null=True)
     prix = models.FloatField()
     date = models.DateTimeField()
     titre = models.CharField(max_length=255)
     auteur = models.CharField(max_length=255)
     description = models.TextField()
     published = models.IntegerField()
+
+    def __str__(self):
+        return self.titre
+
 
     class Meta:
         managed = False
@@ -182,6 +191,9 @@ class Utilisateurs(models.Model):
     roles = models.TextField()
     credentials_expired = models.IntegerField()
     credentials_expire_at = models.DateTimeField(blank=True, null=True)
+
+    def __str__(self):
+        return self.username
 
     class Meta:
         managed = False

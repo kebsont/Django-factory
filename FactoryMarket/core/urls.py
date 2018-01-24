@@ -25,7 +25,6 @@ app_name = 'core'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^annonces/', views.annonces, name='annonces'),
-    url(r'^contact/', views.contact, name='contact'),
+    url(r'^pages/annonces/', views.annonces, name='annonces'),
+    url(r'^pages/contact/', views.contact, name='contact'),
 ]
-

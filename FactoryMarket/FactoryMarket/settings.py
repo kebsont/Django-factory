@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'debug_toolbar',
     'core.apps.CoreConfig',
-    
+    #'core',
+
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'FactoryMarket.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+'''
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', $
@@ -87,7 +88,13 @@ DATABASES = {
             'PORT': '3306',                      # Set to empty string for defa$
         }
     }
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }
+}
 
 
 # Password validation
